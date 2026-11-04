@@ -7,7 +7,7 @@ Open Claude Code at the workspace root. Invoke:
 | Command | Purpose |
 |---|---|
 | /theme-update | Establish or revise the theme |
-| /intake | Process files in working/inbox/: identify intent (theme, knowledge, plan, asset), propose updates, store and index |
+| /intake | Process files in inbox/: identify intent (theme, knowledge, plan, asset), propose updates, store and index |
 | /presentation-plan | Discuss and update the slide plan |
 | /slides-generate | Generate samples, selected slides or the deck |
 | /slides-edit | Edit selected slides |

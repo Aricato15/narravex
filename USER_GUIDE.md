@@ -8,7 +8,23 @@ This workspace helps you turn reference images and confirmed information into ed
 2. Keep one clean copy as your starter.
 3. Copy the entire presentation-template folder and rename the copy for your presentation.
 4. Open that copied folder in Claude Code. In a terminal, navigate to it and run `claude` if that is how you normally launch Claude Code.
-5. Keep all project inputs and outputs inside that copy.
+5. Run `sh template/init-working.sh` once to create the working/ folder (skip if working/ already exists).
+6. Keep all project inputs and outputs inside that copy.
+
+### Where things live
+
+- **inbox/** is the only place you put files. The folder is part of the repository, but the files you drop in it are never committed.
+- **working/** is where Claude keeps everything it produces and tracks for your project, and it is never committed:
+  - working/output/current/ — your latest PPTX deck;
+  - working/output/previews/ — slide preview images;
+  - working/output/versions/ — earlier versions of the deck;
+  - working/theme/, working/knowledge_folder/, working/presentation/ — agreed theme, topic knowledge, brief and slide plan;
+  - working/references/ — processed originals (SRC-###_name) and analysis notes;
+  - working/src/ — editable slide-generation source;
+  - working/SOURCES.md — index of every file you provided.
+- **template/**, **workflows/** and **.claude/** are the reusable starter and instructions. You normally don't edit them.
+
+Because working/ and inbox/ contents are git-ignored, back them up yourself if you need to keep them.
 
 No API key or separate application is prescribed by this template. Use your existing Claude Code installation and authentication. This folder provides instructions and planning files, not a preinstalled slide-generation engine.
 
@@ -18,13 +34,13 @@ Start with this prompt:
 
 ## 2. Add your inputs
 
-Drop everything in **working/inbox/**: style references, content (images, PDF, Word, PowerPoint, spreadsheets), planning documents, logos and fonts. Claude works out each file's purpose with you during `/intake` (section 4), then stores it.
+Drop everything in **inbox/**: style references, content (images, PDF, Word, PowerPoint, spreadsheets), planning documents, logos and fonts. Claude works out each file's purpose with you during `/intake` (section 4), then stores it.
 
 Give files descriptive names. Say what a file is for if you can ("table styles", "Q3 report"). If a file serves several purposes, such as a PPTX that supplies both style and content, Claude will ask about each one.
 
 ## 3. Establish the theme
 
-Drop your style reference images in working/inbox/ and run `/intake` (section 4); say they are for the theme. Claude proposes global settings (palette, fonts, backgrounds, spacing) and a formatting pattern for each kind of visualization the images show (bar chart, table, process diagram and so on). Tell it which proposals you approve and what to change. Agreed settings are recorded in working/theme/theme.json, working/theme/patterns.json and working/theme/theme-guide.md.
+Drop your style reference images in inbox/ and run `/intake` (section 4); say they are for the theme. Claude proposes global settings (palette, fonts, backgrounds, spacing) and a formatting pattern for each kind of visualization the images show (bar chart, table, process diagram and so on). Tell it which proposals you approve and what to change. Agreed settings are recorded in working/theme/theme.json, working/theme/patterns.json and working/theme/theme-guide.md.
 
 To revise the theme later, add new reference files and run `/intake` again, or run `/theme-update` with your request. Claude identifies the affected slides before anything is regenerated.
 
@@ -32,7 +48,7 @@ To revise the theme later, add new reference files and run `/intake` again, or r
 
 > /intake
 
-Claude lists what is in working/inbox/ and flags duplicates (same file content) and possible new versions. It then takes the files one at a time:
+Claude lists what is in inbox/ and flags duplicates (same file content) and possible new versions. It then takes the files one at a time:
 
 1. confirms what each file is for (theme, knowledge, plan, or asset);
 2. reads it according to that purpose;
@@ -41,11 +57,11 @@ Claude lists what is in working/inbox/ and flags duplicates (same file content) 
 5. asks whether the file serves another purpose;
 6. moves it to working/references/originals/ as SRC-###_name and records it in working/SOURCES.md.
 
-Nothing proposed becomes confirmed until you accept it. You can also run it on specific files: `/intake working/inbox/q3-report.pdf`.
+Nothing proposed becomes confirmed until you accept it. You can also run it on specific files: `/intake inbox/q3-report.pdf`.
 
 Review uncertain text, chart values and connector meanings. A screenshot may not provide enough data to recreate an accurate editable chart; supply the underlying values when available. Reading PDF, Word, PowerPoint and spreadsheet files may need local libraries; Claude reports what is missing and does not install anything without asking.
 
-Files are processed when requested. Dropping a file does not trigger background processing. Files Claude cannot read stay in working/inbox/ with the reason.
+Files are processed when requested. Dropping a file does not trigger background processing. Files Claude cannot read stay in inbox/ with the reason.
 
 ## 5. Build the topic knowledge
 
@@ -140,7 +156,7 @@ For another presentation, copy the clean starter again. Do not reuse a populated
 - **Content is misread:** Correct the source extraction and relevant topic before regenerating slides.
 - **A slide is flattened into an image:** Ask for native text, shapes, tables or charts, and a clear explanation of any unavoidable image elements.
 - **The layout is crowded:** Ask to split the content or simplify its structure while preserving meaning.
-- **A new reference appears ignored:** Run `/intake`. Files still in working/inbox/ have not been processed.
+- **A new reference appears ignored:** Run `/intake`. Files still in inbox/ have not been processed.
 - **A file was reported as a duplicate:** Its content matches an earlier source (see working/SOURCES.md). It is not reprocessed; Claude records the new name as an alias.
 - **A generation tool is missing:** Complete the first-build environment check; the template itself installs no packages.
 

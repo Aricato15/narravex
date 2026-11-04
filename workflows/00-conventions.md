@@ -11,7 +11,7 @@ Shared rules for IDs, names and statuses. Other workflows refer here instead of 
 ## Folders
 | Folder | Role |
 |---|---|
-| working/inbox/ | The only place the user drops files. Anything still here is unprocessed. |
+| inbox/ | The only place the user drops files. Anything still here is unprocessed. |
 | working/references/originals/ | Byte-identical stored copies, named `SRC-###_<slug>.<ext>`. |
 | working/references/analysis/SRC-###/ | Extraction and proposal notes for one source. |
 | working/references/analysis/_pending/<hash12>/ | Working notes for a file not yet stored (hash12 = first 12 hex characters of its SHA-256). |
