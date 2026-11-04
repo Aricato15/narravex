@@ -1,5 +1,5 @@
 # All project work lives in working/ and is never tracked.
-# Recreate it from template/starter/ with: sh template/init-working.sh
+# Recreate it from _template/starter/ with: sh _template/init-working.sh
 /working/
 
 # inbox/ is tracked as a folder, but files users drop into it are not

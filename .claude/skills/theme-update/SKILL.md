@@ -17,9 +17,9 @@ If arguments are empty, use the current user request and saved project state. As
 
 ## Procedure
 
-Read workflows/01-theme.md and follow it together with these instructions.
+Read _workflows/01-theme.md and follow it together with these instructions.
 
-Read working/theme/theme.json, working/theme/patterns.json and working/theme/theme-guide.md. Find theme sources in working/SOURCES.md (intent `theme`) and read their analysis notes; new theme files are handled by /intake, which calls this procedure for accepted changes. Separate visual cues from content. Propose global tokens and per-visualization patterns, record uncertainty and font substitutions, and apply agreed changes with a theme revision. Identify affected slides; do not regenerate them unless requested.
+Read working/_theme/theme.json, working/_theme/patterns.json and working/_theme/theme-guide.md. Find theme sources in working/SOURCES.md (intent `theme`) and read their analysis notes; new theme files are handled by /intake, which calls this procedure for accepted changes. Separate visual cues from content. Propose global tokens and per-visualization patterns, record uncertainty and font substitutions, and apply agreed changes with a theme revision. Identify affected slides; do not regenerate them unless requested.
 
 ## Completion
 

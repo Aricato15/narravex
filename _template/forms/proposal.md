@@ -11,7 +11,7 @@ Extraction: <path to extraction notes>
 | # | Target file | Change | Locators | Confidence |
 |---|---|---|---|---|
 
-<Targets: working/theme/theme.json, working/theme/patterns.json, a knowledge topic/item ID, working/presentation/brief.md, working/presentation/slide-plan.json. Mark new vs existing IDs. Nothing here is applied.>
+<Targets: working/_theme/theme.json, working/_theme/patterns.json, a knowledge topic/item ID, working/presentation/brief.md, working/presentation/slide-plan.json. Mark new vs existing IDs. Nothing here is applied.>
 
 ## Uncertainties and questions
 <Unreadable text, missing data, ambiguous relationships, conflicts with existing confirmed content. Never invent.>

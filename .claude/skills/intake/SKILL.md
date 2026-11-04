@@ -17,9 +17,9 @@ If arguments are empty, process everything currently in inbox/. If arguments nam
 
 ## Procedure
 
-Read workflows/00-conventions.md and workflows/02-intake.md and follow them together with these instructions.
+Read _workflows/00-conventions.md and _workflows/02-intake.md and follow them together with these instructions.
 
-Read working/SOURCES.md first, then scan inbox/ and compare SHA-256 hashes. Report duplicates and possible new versions before analysing anything. Work on one file at a time: confirm intent with the user when it is not explicit, read the matching file in workflows/intake/formats/ and workflows/intake/intent-<intent>.md, write the extraction and a proposal under working/references/analysis/_pending/, and present what you learned with numbered proposed changes. Apply only changes the user accepts, using the theme, knowledge and plan workflows. Ask whether the file has further intents. When finished, move the file from inbox/ to working/references/originals/ as SRC-###_<slug>.<ext> after verifying its hash, rename the analysis folder, and update working/SOURCES.md.
+Read working/SOURCES.md first, then scan inbox/ and compare SHA-256 hashes. Report duplicates and possible new versions before analysing anything. Work on one file at a time: confirm intent with the user when it is not explicit, read the matching file in _workflows/intake/formats/ and _workflows/intake/intent-<intent>.md, write the extraction and a proposal under working/_references/analysis/_pending/, and present what you learned with numbered proposed changes. Apply only changes the user accepts, using the theme, knowledge and plan workflows. Ask whether the file has further intents. When finished, move the file from inbox/ to working/_references/originals/ as SRC-###_<slug>.<ext> after verifying its hash, rename the analysis folder, and update working/SOURCES.md.
 
 Do not write to theme, knowledge, plan or brief files before the user accepts. Do not delete inbox files without being asked. Do not install packages automatically. Never invent unreadable text or chart values.
 

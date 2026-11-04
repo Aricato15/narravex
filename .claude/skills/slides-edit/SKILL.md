@@ -17,7 +17,7 @@ If arguments are empty, use the current user request and saved project state. As
 
 ## Procedure
 
-Read workflows/05-edit.md and follow it together with these instructions.
+Read _workflows/05-edit.md and follow it together with these instructions.
 
 Resolve target slide IDs and requested change. Read source, plan and dependencies. Reconcile user-supplied manually edited PPTX before rebuilding older source. Preserve unrelated slides. Edit reproducible source, update revisions/status, archive previous outputs, rebuild, render and inspect affected slides. Update topic knowledge only when meaning or decisions change. Mark dependent slides stale and report validation honestly.
 

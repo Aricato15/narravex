@@ -17,9 +17,9 @@ If arguments are empty, use the current user request and saved project state. As
 
 ## Procedure
 
-Read workflows/03-plan.md and follow it together with these instructions.
+Read _workflows/03-plan.md and follow it together with these instructions.
 
-Read working/presentation/brief.md, slide-plan.json, review-notes.md and relevant topic files via the knowledge index. Develop the plan conversationally. Use template/forms/slide-entry.json for entries; preserve stable slide IDs when reordered. Track revisions, objectives, sources and review state. Record explicit approval already given. Do not generate the deck unless requested.
+Read working/presentation/brief.md, slide-plan.json, review-notes.md and relevant topic files via the knowledge index. Develop the plan conversationally. Use _template/forms/slide-entry.json for entries; preserve stable slide IDs when reordered. Track revisions, objectives, sources and review state. Record explicit approval already given. Do not generate the deck unless requested.
 
 ## Completion
 
