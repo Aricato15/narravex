@@ -2,6 +2,10 @@
 # Recreate it from template/starter/ with: sh template/init-working.sh
 /working/
 
+# inbox/ is tracked as a folder, but files users drop into it are not
+/inbox/*
+!/inbox/.gitkeep
+
 # Build products, dependencies and OS/editor noise
 node_modules/
 __pycache__/

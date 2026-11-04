@@ -1,6 +1,6 @@
 # Analyse or update theme
 
-Theme reference files arrive through working/inbox/ and are analysed in the intake workflow (workflows/02-intake.md, intent `theme`, see workflows/intake/intent-theme.md). Their stored copies and analysis are listed in working/SOURCES.md (intent `theme`). This workflow is also used directly to revise the theme without new files.
+Theme reference files arrive through inbox/ and are analysed in the intake workflow (workflows/02-intake.md, intent `theme`, see workflows/intake/intent-theme.md). Their stored copies and analysis are listed in working/SOURCES.md (intent `theme`). This workflow is also used directly to revise the theme without new files.
 
 Read theme.json, patterns.json, theme-guide.md and the analysis notes of the theme sources. Propose:
 - global tokens: palette and semantic colours, typography/fallbacks, backgrounds, spacing, shapes;
