@@ -1,0 +1,20 @@
+{
+  "id": "<stable-slide-id>",
+  "position": null,
+  "title": "",
+  "objective": "",
+  "revision": 1,
+  "status": "draft",
+  "layout": "",
+  "knowledge_items": [],
+  "reference_ids": [],
+  "pattern_ids": [],
+  "content_outline": [],
+  "source_path": null,
+  "theme_revision": null,
+  "pattern_revisions": {},
+  "topic_revisions": {},
+  "needs_regeneration": false,
+  "stale_reason": null,
+  "open_questions": []
+}

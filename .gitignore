@@ -1,0 +1,19 @@
+# All project work lives in working/ and is never tracked.
+# Recreate it from template/starter/ with: sh template/init-working.sh
+/working/
+
+# Build products, dependencies and OS/editor noise
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+~$*
+.~lock.*
+*.tmp
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Local Claude Code settings
+.claude/settings.local.json

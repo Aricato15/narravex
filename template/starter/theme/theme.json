@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "revision": 0,
+  "status": "not-established",
+  "aspect_ratio": "16:9",
+  "palette": {},
+  "typography": {
+    "heading_font": null,
+    "body_font": null,
+    "fallback_fonts": []
+  },
+  "layout": {},
+  "shapes": {},
+  "semantic_colours": {},
+  "reference_files": [],
+  "substitutions": []
+}

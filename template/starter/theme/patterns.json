@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "revision": 0,
+  "note": "Formatting rules per visualization or layout type. Anything a pattern does not specify falls back to theme.json. Entries are proposed until the user accepts them.",
+  "patterns": []
+}
