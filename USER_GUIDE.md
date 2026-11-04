@@ -8,7 +8,7 @@ This workspace helps you turn reference images and confirmed information into ed
 2. Keep one clean copy as your starter.
 3. Copy the entire presentation-template folder and rename the copy for your presentation.
 4. Open that copied folder in Claude Code. In a terminal, navigate to it and run `claude` if that is how you normally launch Claude Code.
-5. Run `sh template/init-working.sh` once to create the working/ folder (skip if working/ already exists).
+5. Run `sh _template/init-working.sh` once to create the working/ folder (skip if working/ already exists).
 6. Keep all project inputs and outputs inside that copy.
 
 ### Where things live
@@ -18,11 +18,13 @@ This workspace helps you turn reference images and confirmed information into ed
   - working/output/current/ — your latest PPTX deck;
   - working/output/previews/ — slide preview images;
   - working/output/versions/ — earlier versions of the deck;
-  - working/theme/, working/knowledge_folder/, working/presentation/ — agreed theme, topic knowledge, brief and slide plan;
-  - working/references/ — processed originals (SRC-###_name) and analysis notes;
-  - working/src/ — editable slide-generation source;
+  - working/_theme/, working/_knowledge_folder/, working/presentation/ — agreed theme, topic knowledge, brief and slide plan (presentation/ is the one you may optionally edit);
+  - working/_references/ — processed originals (SRC-###_name) and analysis notes;
+  - working/_src/ — editable slide-generation source;
   - working/SOURCES.md — index of every file you provided.
-- **template/**, **workflows/** and **.claude/** are the reusable starter and instructions. You normally don't edit them.
+- **_template/**, **_workflows/** and **.claude/** are the reusable starter and instructions. Do not edit them.
+
+**Never touch folders starting with `_`.** They are not user-facing: do not add, edit, rename or delete anything in them. If something in them needs to change, tell Claude. Drop files only in inbox/.
 
 Because working/ and inbox/ contents are git-ignored, back them up yourself if you need to keep them.
 
@@ -40,7 +42,7 @@ Give files descriptive names. Say what a file is for if you can ("table styles",
 
 ## 3. Establish the theme
 
-Drop your style reference images in inbox/ and run `/intake` (section 4); say they are for the theme. Claude proposes global settings (palette, fonts, backgrounds, spacing) and a formatting pattern for each kind of visualization the images show (bar chart, table, process diagram and so on). Tell it which proposals you approve and what to change. Agreed settings are recorded in working/theme/theme.json, working/theme/patterns.json and working/theme/theme-guide.md.
+Drop your style reference images in inbox/ and run `/intake` (section 4); say they are for the theme. Claude proposes global settings (palette, fonts, backgrounds, spacing) and a formatting pattern for each kind of visualization the images show (bar chart, table, process diagram and so on). Tell it which proposals you approve and what to change. Agreed settings are recorded in working/_theme/theme.json, working/_theme/patterns.json and working/_theme/theme-guide.md.
 
 To revise the theme later, add new reference files and run `/intake` again, or run `/theme-update` with your request. Claude identifies the affected slides before anything is regenerated.
 
@@ -55,7 +57,7 @@ Claude lists what is in inbox/ and flags duplicates (same file content) and poss
 3. tells you what it learned and proposes numbered updates;
 4. applies only what you accept, or discusses the rest with you;
 5. asks whether the file serves another purpose;
-6. moves it to working/references/originals/ as SRC-###_name and records it in working/SOURCES.md.
+6. moves it to working/_references/originals/ as SRC-###_name and records it in working/SOURCES.md.
 
 Nothing proposed becomes confirmed until you accept it. You can also run it on specific files: `/intake inbox/q3-report.pdf`.
 
@@ -65,7 +67,7 @@ Files are processed when requested. Dropping a file does not trigger background 
 
 ## 5. Build the topic knowledge
 
-> Follow workflows/06-knowledge.md. Organise the extracted information into topics. Check working/knowledge_folder/index.md before creating files. Record confirmed information, proposals, decisions, sources and open questions within each topic. Show me what requires confirmation.
+> Follow _workflows/06-knowledge.md. Organise the extracted information into topics. Check working/_knowledge_folder/index.md before creating files. Record confirmed information, proposals, decisions, sources and open questions within each topic. Show me what requires confirmation.
 
 The knowledge folder contains one index tracker and one Markdown file per actual topic. It does not use separate top-level files for decisions or open questions.
 
@@ -77,9 +79,9 @@ You can also provide original information directly in conversation. Ask Claude t
 
 ## 6. Plan the presentation through conversation
 
-Explain your audience, desired outcome, speaking duration and key messages. You can fill working/presentation/brief.md yourself or ask Claude to maintain it.
+Explain your audience, desired outcome, speaking duration and key messages. You can fill working/presentation/brief.md yourself or ask Claude to maintain it. working/presentation/ is user-facing: you may optionally edit the brief, slide plan and review notes, and Claude will read your changes.
 
-> Follow workflows/03-plan.md. Help me develop the storyline and slide structure from the brief and relevant knowledge topics. Propose each slide's objective, main content and layout. Discuss the plan with me before generating slides.
+> Follow _workflows/03-plan.md. Help me develop the storyline and slide structure from the brief and relevant knowledge topics. Propose each slide's objective, main content and layout. Discuss the plan with me before generating slides.
 
 Iterate naturally, for example:
 
@@ -91,11 +93,11 @@ Use IDs shown in the actual plan. Stable IDs identify slides even after their po
 
 For the first build:
 
-> Inspect the installed PowerPoint tooling and the local dependencies needed to generate editable PPTX and render previews. Explain missing dependencies and help me configure the required toolchain for my operating system. Save reproducible setup and build instructions in working/src/.
+> Inspect the installed PowerPoint tooling and the local dependencies needed to generate editable PPTX and render previews. Explain missing dependencies and help me configure the required toolchain for my operating system. Save reproducible setup and build instructions in working/_src/.
 
 Then:
 
-> Follow workflows/04-generate.md. Generate one representative slide from the agreed plan. Reconstruct its information as editable elements and apply the confirmed theme. Render, inspect and fix it, then provide the PPTX and preview for review.
+> Follow _workflows/04-generate.md. Generate one representative slide from the agreed plan. Reconstruct its information as editable elements and apply the confirmed theme. Render, inspect and fix it, then provide the PPTX and preview for review.
 
 After approving the sample:
 
@@ -111,7 +113,7 @@ Replace angle-bracket placeholders with actual values; do not type them literall
 
 Be specific about the slide and intended change:
 
-> Follow workflows/05-edit.md. On slide <slide-ID>, enlarge the diagram labels and simplify the background. Preserve the wording and all other slides. Update the source, rebuild and inspect the result.
+> Follow _workflows/05-edit.md. On slide <slide-ID>, enlarge the diagram labels and simplify the background. Preserve the wording and all other slides. Update the source, rebuild and inspect the result.
 
 If information changes:
 
@@ -139,13 +141,13 @@ For another presentation, copy the clean starter again. Do not reuse a populated
 
 | Item | Location |
 |---|---|
-| Theme settings | working/theme/theme.json and working/theme/theme-guide.md |
+| Theme settings | working/_theme/theme.json and working/_theme/theme-guide.md |
 | Everything you provided, and where it is stored | working/SOURCES.md |
-| Stored originals and extraction notes | working/references/originals/ and working/references/analysis/ |
-| Visualization formatting rules | working/theme/patterns.json |
-| Topic knowledge | working/knowledge_folder/index.md and topic files |
+| Stored originals and extraction notes | working/_references/originals/ and working/_references/analysis/ |
+| Visualization formatting rules | working/_theme/patterns.json |
+| Topic knowledge | working/_knowledge_folder/index.md and topic files |
 | Brief, slide plan and feedback | working/presentation/ |
-| Editable generation source and build instructions | working/src/ |
+| Editable generation source and build instructions | working/_src/ |
 | Latest PPTX and handoff | working/output/current/ |
 | Slide previews | working/output/previews/ |
 | Prior deliverables | working/output/versions/ |

@@ -3,8 +3,8 @@
 Goal: learn how slides should look, including how each kind of visualization should be formatted. The file's factual content is never slide content.
 
 ## What to look for
-1. **Global tokens** (working/theme/theme.json): palette with semantic meanings, heading/body fonts and sizes, background treatment, margins and spacing, shape and line style, decorative elements.
-2. **Per-visualization patterns** (working/theme/patterns.json): identify each distinct visualization or layout the file shows (e.g. bar chart, line chart, table, process diagram, KPI tile, title slide, content slide). For each, note the rules that differ from the global tokens: series colour order, gridlines, axis and label size, legend position, table header fill, banding, borders, number formats, connector and arrow style. Use template/forms/pattern-entry.json.
+1. **Global tokens** (working/_theme/theme.json): palette with semantic meanings, heading/body fonts and sizes, background treatment, margins and spacing, shape and line style, decorative elements.
+2. **Per-visualization patterns** (working/_theme/patterns.json): identify each distinct visualization or layout the file shows (e.g. bar chart, line chart, table, process diagram, KPI tile, title slide, content slide). For each, note the rules that differ from the global tokens: series colour order, gridlines, axis and label size, legend position, table header fill, banding, borders, number formats, connector and arrow style. Use _template/forms/pattern-entry.json.
 3. **When to use it**: the data shape or content each pattern suits. A reference showing a table pattern does not say which slide needs a table; that is decided in planning and confirmed by the user.
 
 ## Method

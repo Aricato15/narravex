@@ -12,7 +12,7 @@ Goal: learn how the presentation should be structured, from files that describe 
 - Separate **stated requirements** (explicit in the file) from **your inferences**. Label which is which.
 - Where the file references facts or data, those belong under the knowledge intent; propose that intent too instead of embedding facts in the plan.
 - Compare with brief.md and slide-plan.json. Flag conflicts with approved content or approved plan revisions; do not overwrite them.
-- Propose slide entries with template/forms/slide-entry.json (status draft). Do not assign IDs by guess; follow workflows/00-conventions.md.
+- Propose slide entries with _template/forms/slide-entry.json (status draft). Do not assign IDs by guess; follow _workflows/00-conventions.md.
 
 ## Proposal targets
 brief.md fields, new or changed slide-plan.json entries, review-notes.md items, open questions.

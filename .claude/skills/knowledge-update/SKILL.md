@@ -17,9 +17,9 @@ If arguments are empty, use the current user request and saved project state. As
 
 ## Procedure
 
-Read workflows/06-knowledge.md and follow it together with these instructions.
+Read _workflows/06-knowledge.md and follow it together with these instructions.
 
-Read working/knowledge_folder/index.md first and relevant topic files. Update an existing topic or copy template/forms/topic.md for a distinct new topic. Assign stable topic/item IDs. Keep confirmation evidence and source references, proposals, decisions, questions and history inside the relevant topic. Maintain only the index plus topic files at the knowledge-folder top level. Update index/status/slide usage; mark affected slides stale. Record explicit approvals without asking again; extraction alone is not confirmation.
+Read working/_knowledge_folder/index.md first and relevant topic files. Update an existing topic or copy _template/forms/topic.md for a distinct new topic. Assign stable topic/item IDs. Keep confirmation evidence and source references, proposals, decisions, questions and history inside the relevant topic. Maintain only the index plus topic files at the knowledge-folder top level. Update index/status/slide usage; mark affected slides stale. Record explicit approvals without asking again; extraction alone is not confirmation.
 
 ## Completion
 
