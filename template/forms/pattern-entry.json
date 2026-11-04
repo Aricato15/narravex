@@ -1,0 +1,18 @@
+{
+  "id": "P-<kebab-name>",
+  "kind": "chart | table | diagram | kpi | layout | other",
+  "label": "",
+  "status": "proposed",
+  "revision": 1,
+  "source_ids": [],
+  "source_locators": [],
+  "use_when": "Data shapes or content types this pattern suits.",
+  "rules": {
+    "colours": "Series order / fills / semantic use; reference theme.json tokens where possible.",
+    "typography": "Sizes and weights for titles, labels, values, legends.",
+    "structure": "Axes, gridlines, legend position, header row, banding, borders, spacing.",
+    "number_format": ""
+  },
+  "uncertainties": [],
+  "confirmation": null
+}
