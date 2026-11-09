@@ -1,6 +1,6 @@
-# Claude Code Project Skills
+# Narravex — Claude Code Project Skills
 
-Copy this .claude folder into the presentation workspace beside CLAUDE.md. Merge with an existing .claude folder; do not overwrite your settings. These skills depend on the template’s workflows, templates and project-state files and are not standalone global skills.
+Copy this .claude folder into the Narravex workspace beside CLAUDE.md. Merge with an existing .claude folder; do not overwrite your settings. These skills depend on Narravex’s workflows, templates and project-state files and are not standalone global skills.
 
 Open Claude Code at the workspace root. Invoke:
 

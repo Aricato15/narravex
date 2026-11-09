@@ -1,19 +1,27 @@
-# Reusable Presentation Template
+# Narravex
+
+Narravex turns your source material into editable PowerPoint slides with Claude Code. Drop in theme references, content documents, plans and assets. Claude sorts out what each file is for, builds a confirmed knowledge base and slide plan with you, then generates native, editable PPTX slides styled to your theme. The decks are suitable for Google Slides import and come with preview images.
 
 Copy this entire folder for each new presentation. Keep this starter free of project content.
 
 For step-by-step instructions and copyable prompts, see [USER_GUIDE.md](USER_GUIDE.md).
 
+## About the name
+- **Narra** stands for narrative, storytelling and presentation structure.
+- **Vex** is an invented ending that suggests complex connections and intelligence.
+- **Scalable:** the name fits knowledge management, research and reporting as well as slide generation.
+- **Developer-friendly:** related components can follow one naming pattern: `narravex`, `narravex-agent`, `narravex-core` and `narravex-slides`.
+
 ## Repository layout
 - inbox/ (folder tracked, contents ignored): drop your input files here. Files you add are never committed.
-- working/ (git-ignored): all your intermediate files and slides live here: references, knowledge, theme, plan, src, and output (output/current/ holds the PPTX, output/previews/ the slide images). Create it once with `sh _template/init-working.sh`, which copies _template/starter/ without overwriting existing files.
+- working/ (git-ignored): all your intermediate files and slides live here. That covers references, knowledge, theme, plan, src and output; output/current/ holds the PPTX and output/previews/ the slide images. Create it once with `sh _template/init-working.sh`, which copies _template/starter/ without overwriting existing files.
 - _template/ (tracked): starter/ holds the blank project state; forms/ holds blank forms to copy. Nothing project-specific belongs here.
 - _workflows/, .claude/, CLAUDE.md, README.md, USER_GUIDE.md (tracked): operating instructions.
 
 **Naming convention:** folders starting with `_` are not user-facing: never add, edit, rename or delete anything in them; ask Claude instead. Unprefixed folders are user-facing: inbox/ (drop files), working/output/ (collect slides and previews) and working/presentation/ (brief and slide plan, optional to edit). Inside working/, the prefixed folders are _references/, _knowledge_folder/, _theme/, _src/ and _assets/.
 
 ## Start
-1. Open the copied folder in Claude Code.
+1. Open your copy of the Narravex folder in Claude Code.
 2. Drop every input file in inbox/: style references, content documents (images, PDF, Word, PowerPoint, spreadsheets), planning documents, logos and fonts.
 3. Run `/intake`. Claude goes through each file, asks or confirms its purpose (theme, knowledge, plan, asset), proposes updates, and applies the ones you accept. It then stores the file as SRC-###_name in working/_references/originals/ and records it in working/SOURCES.md.
 4. Describe the audience and objective in working/presentation/brief.md, or discuss them with Claude (/presentation-plan).
@@ -25,8 +33,17 @@ Suggested opening prompt:
 ## Workflows and skills
 The Markdown files in _workflows/ are the procedures; the skills in .claude/skills/ invoke them (see .claude/README.md). The inbox is processed on request, not watched in the background. Shared ID, folder and naming rules are in _workflows/00-conventions.md.
 
+| Command | Purpose |
+|---|---|
+| /intake | Process files in inbox/ and store them |
+| /theme-update | Establish or revise the theme |
+| /knowledge-update | Capture or revise topic knowledge |
+| /presentation-plan | Discuss and update the slide plan |
+| /slides-generate | Generate samples, selected slides or the deck |
+| /slides-edit | Edit selected slides |
+
 ## Setup boundary
-This is a planning and operating template, not a preconfigured slide renderer. On first generation, ask Claude to inspect its installed PowerPoint capability and local dependencies, then set up a reproducible generation and rendering toolchain. Keep dependency manifests and build instructions in working/_src/.
+Narravex is a planning and operating framework, not a preconfigured slide renderer. On first generation, ask Claude to inspect its installed PowerPoint capability and local dependencies, then set up a reproducible generation and rendering toolchain. Keep dependency manifests and build instructions in working/_src/.
 
 ## Folder map
 - inbox/ (repo root): the single drop folder for all incoming files. Anything still here is unprocessed.

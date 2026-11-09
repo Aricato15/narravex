@@ -1,4 +1,4 @@
-# Reusable Presentation Workspace
+# Narravex — Reusable Presentation Workspace
 
 ## Scope and context
 Use only this project's files, the current project conversation, and references explicitly supplied or authorised for this project. Do not import facts, preferences, examples or decisions from other chats or projects. Ask before importing external project context.
