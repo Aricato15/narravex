@@ -1,12 +1,12 @@
-# User Guide — Reusable Presentation Workspace
+# Narravex User Guide
 
-This workspace helps you turn reference images and confirmed information into editable PowerPoint slides. Theme images guide appearance; information images supply content. The intended deliverable is a PPTX suitable for Google Slides import, with slide previews for review.
+Narravex helps you turn reference images and confirmed information into editable PowerPoint slides. Theme images guide appearance; information images supply content. The intended deliverable is a PPTX suitable for Google Slides import, with slide previews for review.
 
 ## 1. Create your presentation workspace
 
-1. Unzip the template.
+1. Unzip Narravex.
 2. Keep one clean copy as your starter.
-3. Copy the entire presentation-template folder and rename the copy for your presentation.
+3. Copy the entire narravex folder and rename the copy for your presentation.
 4. Open that copied folder in Claude Code. In a terminal, navigate to it and run `claude` if that is how you normally launch Claude Code.
 5. Run `sh _template/init-working.sh` once to create the working/ folder (skip if working/ already exists).
 6. Keep all project inputs and outputs inside that copy.
@@ -28,7 +28,7 @@ This workspace helps you turn reference images and confirmed information into ed
 
 Because working/ and inbox/ contents are git-ignored, back them up yourself if you need to keep them.
 
-No API key or separate application is prescribed by this template. Use your existing Claude Code installation and authentication. This folder provides instructions and planning files, not a preinstalled slide-generation engine.
+No API key or separate application is prescribed by Narravex. Use your existing Claude Code installation and authentication. This folder provides instructions and planning files, not a preinstalled slide-generation engine.
 
 Start with this prompt:
 
@@ -160,6 +160,6 @@ For another presentation, copy the clean starter again. Do not reuse a populated
 - **The layout is crowded:** Ask to split the content or simplify its structure while preserving meaning.
 - **A new reference appears ignored:** Run `/intake`. Files still in inbox/ have not been processed.
 - **A file was reported as a duplicate:** Its content matches an earlier source (see working/SOURCES.md). It is not reprocessed; Claude records the new name as an alias.
-- **A generation tool is missing:** Complete the first-build environment check; the template itself installs no packages.
+- **A generation tool is missing:** Complete the first-build environment check; Narravex itself installs no packages.
 
 Keep theme choices, source evidence, confirmed knowledge and slide plans current as you work. These saved files allow the project to continue across sessions.
