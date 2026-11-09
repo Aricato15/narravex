@@ -1,6 +1,19 @@
-# All project work lives in working/ and is never tracked.
+# All project work lives in working/ and is not tracked by default.
 # Recreate it from _template/starter/ with: sh _template/init-working.sh
-/working/
+# (working/* rather than working/ so the opt-in lines below can re-include it.)
+/working/*
+
+# --- Opt in: track your own slides -----------------------------------------
+# In your own copy of Narravex, uncomment ONE option to commit your work.
+# Leave both commented in the shared Narravex repository.
+#
+# Option A: finished slides only (PPTX in output/current/, previews, versions)
+# !/working/output/
+#
+# Option B: the whole project (slides plus the brief, slide plan, theme,
+# knowledge, stored source files and generation source needed to rebuild them)
+# !/working/*
+# ----------------------------------------------------------------------------
 
 # inbox/ is tracked as a folder, but files users drop into it are not
 /inbox/*

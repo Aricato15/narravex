@@ -14,7 +14,7 @@ For step-by-step instructions and copyable prompts, see [USER_GUIDE.md](USER_GUI
 
 ## Repository layout
 - inbox/ (folder tracked, contents ignored): drop your input files here. Files you add are never committed.
-- working/ (git-ignored): all your intermediate files and slides live here. That covers references, knowledge, theme, plan, src and output; output/current/ holds the PPTX and output/previews/ the slide images. Create it once with `sh _template/init-working.sh`, which copies _template/starter/ without overwriting existing files.
+- working/ (git-ignored by default; see [Tracking your own work](#tracking-your-own-work)): all your intermediate files and slides live here. That covers references, knowledge, theme, plan, src and output; output/current/ holds the PPTX and output/previews/ the slide images. Create it once with `sh _template/init-working.sh`, which copies _template/starter/ without overwriting existing files.
 - _template/ (tracked): starter/ holds the blank project state; forms/ holds blank forms to copy. Nothing project-specific belongs here.
 - _workflows/, .claude/, CLAUDE.md, README.md, USER_GUIDE.md (tracked): operating instructions.
 
@@ -29,6 +29,24 @@ For step-by-step instructions and copyable prompts, see [USER_GUIDE.md](USER_GUI
 
 Suggested opening prompt:
 > Read CLAUDE.md and README.md. Inspect this project's inputs. Run /intake on what is in inbox/, then help me discuss a slide plan. Use only this workspace and this project's conversation. Do not generate a full deck yet.
+
+## Tracking your own work
+By default, git ignores everything in working/ and anything you drop in inbox/. When you clone or pull Narravex, you get the framework only, and your slides are never committed by accident. That keeps the shared repository free of project content.
+
+To commit your own slides in your copy, open `.gitignore` and uncomment one line in the "Opt in" block:
+
+| Option | Line to uncomment | What gets committed |
+|---|---|---|
+| A: slides only | `!/working/output/` | working/output/: the current PPTX, previews and earlier versions |
+| B: whole project | `!/working/*` | All of working/: slides plus the brief, slide plan, theme, knowledge, stored source files and generation source, so the deck can be rebuilt |
+
+Then run `git add working` and commit as usual. Before you push, keep in mind:
+- Option B commits your stored source files (working/_references/originals/). Only push to a remote you trust with that material.
+- PPTX files, previews and stored originals are binary and can be large. Consider Git LFS if the repository grows.
+- inbox/ stays ignored with either option. Files there are unprocessed, and /intake moves them into working/.
+- Do not commit an uncommented opt-in back to the shared Narravex repository.
+
+If you track nothing, back up working/ yourself.
 
 ## Workflows and skills
 The Markdown files in _workflows/ are the procedures; the skills in .claude/skills/ invoke them (see .claude/README.md). The inbox is processed on request, not watched in the background. Shared ID, folder and naming rules are in _workflows/00-conventions.md.
