@@ -26,7 +26,7 @@ Narravex helps you turn reference images and confirmed information into editable
 
 **Never touch folders starting with `_`.** They are not user-facing: do not add, edit, rename or delete anything in them. If something in them needs to change, tell Claude. Drop files only in inbox/.
 
-Because working/ and inbox/ contents are git-ignored, back them up yourself if you need to keep them.
+Because working/ and inbox/ contents are git-ignored by default, back them up yourself if you need to keep them. To commit your slides (or the whole working/ folder) in your own copy instead, uncomment one opt-in line in `.gitignore`. See "Tracking your own work" in README.md.
 
 No API key or separate application is prescribed by Narravex. Use your existing Claude Code installation and authentication. This folder provides instructions and planning files, not a preinstalled slide-generation engine.
 
